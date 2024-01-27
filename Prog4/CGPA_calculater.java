@@ -3,62 +3,45 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
-
 public class CGPA_calculater extends JFrame {
-
     private JTextField nameField, usnField, ageField, addressField, sgpaField1, sgpaField2, sgpaField3, sgpaField4;
     private JComboBox<String> categoryComboBox;
     private JTextArea displayArea;
-
     private HashMap<Integer, String> studentDetails = new HashMap<>();
     private int studentID = 1;
-
     public CGPA_calculater() {
         setTitle("Student Information");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 600);
-
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        add(panel);
-
-        panel.add(new JLabel("Name:"));
+        setSize(400, 600); 
+       setLayout(new GridLayout(0,2));
+        add(new JLabel("Name:"));
         nameField = new JTextField(20);
-        panel.add(nameField);
-
-        panel.add(new JLabel("USN:"));
+       add(nameField);
+       add(new JLabel("USN:"));
         usnField = new JTextField(20);
-        panel.add(usnField);
-
-        panel.add(new JLabel("Age:"));
+        add(usnField);
+        add(new JLabel("Age:"));
         ageField = new JTextField(20);
-        panel.add(ageField);
-
-        panel.add(new JLabel("Address:"));
+        add(ageField);
+        add(new JLabel("Address:"));
         addressField = new JTextField(20);
-        panel.add(addressField);
-
-        panel.add(new JLabel("SGPA Semester 1:"));
+        add(addressField);
+        add(new JLabel("SGPA Semester 1:"));
         sgpaField1 = new JTextField(20);
-        panel.add(sgpaField1);
-
-        panel.add(new JLabel("SGPA Semester 2:"));
+       add(sgpaField1);
+        add(new JLabel("SGPA Semester 2:"));
         sgpaField2 = new JTextField(20);
-        panel.add(sgpaField2);
-
-        panel.add(new JLabel("SGPA Semester 3:"));
+       add(sgpaField2);
+        add(new JLabel("SGPA Semester 3:"));
         sgpaField3 = new JTextField(20);
-        panel.add(sgpaField3);
-
-        panel.add(new JLabel("SGPA Semester 4:"));
+        add(sgpaField3);
+       add(new JLabel("SGPA Semester 4:"));
         sgpaField4 = new JTextField(20);
-        panel.add(sgpaField4);
-
-         panel.add(new JLabel("Category:"));
+       add(sgpaField4);
+         add(new JLabel("Category:"));
          String[] categories = {"Category A", "Category B", "Category C"};
          categoryComboBox = new JComboBox<>(categories);
-         panel.add(categoryComboBox);
-
+        add(categoryComboBox);
         JButton computeButton = new JButton("Compute");
         computeButton.addActionListener(new ActionListener() {
             @Override
@@ -66,8 +49,7 @@ public class CGPA_calculater extends JFrame {
                 computeButtonClicked();
             }
         });
-        panel.add(computeButton);
-
+        add(computeButton);
         JButton doneButton = new JButton("Done");
         doneButton.addActionListener(new ActionListener() {
             @Override
@@ -75,8 +57,7 @@ public class CGPA_calculater extends JFrame {
                 doneButtonClicked();
             }
         });
-        panel.add(doneButton);
-
+        add(doneButton);
         JButton displayButton = new JButton("Display");
         displayButton.addActionListener(new ActionListener() {
             @Override
@@ -84,16 +65,12 @@ public class CGPA_calculater extends JFrame {
                 displayButtonClicked();
             }
         });
-        panel.add(displayButton);
-
+       add(displayButton);
         displayArea = new JTextArea(10, 20);
         JScrollPane scrollPane = new JScrollPane(displayArea);
-        panel.add(scrollPane);
-
+        add(scrollPane);
         setVisible(true);
     }
-
-
    private void computeButtonClicked() {
         // Validation logic for age and SGPA
         int age;
@@ -115,25 +92,20 @@ public class CGPA_calculater extends JFrame {
             JOptionPane.showMessageDialog(this, "Please enter valid numeric values!");
         }
     }
-
     private void doneButtonClicked() {
         String studentInfo = nameField.getText() + ", " + usnField.getText() + ", " + ageField.getText() + ", " +
                 addressField.getText() + ", " + sgpaField1.getText() + ", " + sgpaField2.getText() + ", " +
                 sgpaField3.getText() + ", " + sgpaField4.getText() + "," +categoryComboBox.getSelectedItem().toString();
                 studentDetails.put(studentID++, studentInfo);
-        JOptionPane.showMessageDialog(this, "Student information added to the database! ");
-        
+        JOptionPane.showMessageDialog(this, "Student information added to the database! ");     
     }
-
     private void displayButtonClicked() {
         displayArea.setText(""); // Clear previous results
         for (HashMap.Entry<Integer, String> entry : studentDetails.entrySet()) {
             displayArea.append("Student ID: " + entry.getKey() + "\n");
             displayArea.append(entry.getValue() + "\n\n");
         }
-    }
-
-   
+    }  
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
