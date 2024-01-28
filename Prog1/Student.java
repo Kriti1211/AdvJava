@@ -38,6 +38,13 @@ public class Student {
 				System.out.println("Name: "+s.name+" from "+s.sec+" and "+s.dept+" department has "+s.cgpa+"cgpa");
 			}
 		}
-	}
-
+	
+	System.out.println("\nIterating through the list using Iterator:"); 
+		Iterator<Stud> iterator = studentList.iterator(); 
+		while (iterator.hasNext()) { 
+		Stud student = iterator.next(); 
+		System.out.println(student.name + " - CGPA: " + student.cgpa + " bearing USN: " + student.usn); 
+		} 
+		} 
+}
 }
