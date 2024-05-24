@@ -1,3 +1,13 @@
+/*
+Create a desktop java application using swings to enable a user to enter student
+information such as name, usn, age, address, sgpa of 4 semesters, category. Perform
+validations on age(>18 and <=30) and sgpa(range 0 to 10). Display appropriate messages
+in pop up boxes to indicate wrong entries, on clicking of the “compute” button. Also find
+the cgpa based on the obtained sgpa. On clicking of the “done” button, place the student
+details in a hashmap with unique student id as key and student information as value. A
+click on the “display” button should display the collection in a textarea in a separate
+frame.
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
