@@ -1,3 +1,11 @@
+/*
+Write a Java program using user-defined storage classes to create a book database and
+store it into a collection. Each entry in the list should include title, author, publisher and
+price of the book. Maintain the book details with respect to a unique book id. For a given
+a value by the user, find all the books that match either the whole or a part of the book
+title. Identify a publisher and print books from a particular publisher. Update the publisher
+details based on a title. For collections use hashmaps.
+*/
 import java.util.*;
 class Boo{
 	String title,auth,pub;
