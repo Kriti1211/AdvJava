@@ -1,3 +1,11 @@
+/*
+Write java program using swings to create a front end for entering employee data such
+as employee name, employee age, employee payscale(select from a list) , number of family
+members, address, gender (male, female). On the click of the button, display a message
+dialog box holding employer data.
+If the age entered in greater than 22 and less than 60 , then only the data is valid. If invalid,
+pop up an input dialog box to prompt the user to enter age data in the range.
+*/
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
