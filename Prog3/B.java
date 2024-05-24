@@ -1,4 +1,12 @@
-
+/*
+Write a Java program using user-defined storage classes to create a book database and
+store it into a List. Each entry in the list should include title, author, publisher and price
+of the book. Sort the books in ascending order of price and print them. Maintain the book
+details with respect to a unique book id. Prompt for an author name and list all the books
+with the same author’s name. Create a new list holding all the book details with price
+greater than a user specified price.
+Additional: Create a front-end using swings to accept book details
+*/
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
