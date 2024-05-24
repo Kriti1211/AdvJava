@@ -1,3 +1,7 @@
+/*
+Write Java program to create a front end using swings to. Accept login details such as
+login id , name and password. On the click of the submit button add this to a database.
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
