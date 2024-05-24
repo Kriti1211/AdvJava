@@ -1,3 +1,8 @@
+/*
+ Create a Servlet to accepts personal information, salary information and Tax deduction
+details from the user and write the information into a collection. On clicking ‘submit’
+button, copy the contents of the collection to the file.
+*/
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
