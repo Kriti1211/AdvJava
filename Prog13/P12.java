@@ -1,3 +1,9 @@
+/*
+Create a jsp page that accepts patient information in a hospital such as patient id, patient
+name, and age, date of admission, cause of admission, doctor diagnosed, and treatment
+proposed. Using servlet, place the details into a database. Allow options to insert, and view
+the contents in the database.
+*/
 import java.io.*;
 import java.sql.*;
 import jakarta.servlet.ServletException;
