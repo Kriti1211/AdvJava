@@ -1,3 +1,8 @@
+/*
+Create a front end to enter personal details such as first name, last name, age, city name
+and email. Write JSP code to insert the entered details into a database called person, and
+table personal.
+*/
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
 	pageEncoding="ISO-8859-1"%>
 
