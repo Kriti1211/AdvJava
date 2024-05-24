@@ -1,3 +1,9 @@
+/*
+Create an array list of Students (with fields such as name, USN, Dept, section,
+CGPA). Search for the students with CGPA > 8.5. Print the student details
+belonging to ‘ISE’ department. Print students belonging to ‘C’ section. Use
+Iterator to iterate through the list.
+*/
 import java.util.*;
 class Stud{
 	String name,usn,dept;
