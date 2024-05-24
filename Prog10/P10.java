@@ -1,3 +1,9 @@
+/*
+Write a program that uses Java Swing and JDBC to create a stand-alone application:
+Create two tables namely, Patient and Medicine in MySQL database.
+Use appropriate Swing components to insert values in a form for patient and medicine.
+List the patient details taking a particular type of medicine and the type of treatment.
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
