@@ -1,3 +1,11 @@
+/*
+Write a java program to create a collection of customer details. Use swings to allow the
+user to enter the customer mobile number. If the person exists in the collection extract the
+customer id from the collection else add the customer details entered through the swing
+components. Once done, further allow the user to enter the item purchased by giving the
+item id and quantity purchased. On clicking of a button, the item name and the total cost
+should appear information Dialog box. Prompt for any discount and update the total cost.
+*/
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
